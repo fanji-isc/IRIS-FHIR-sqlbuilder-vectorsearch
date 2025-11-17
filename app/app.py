@@ -2,7 +2,8 @@ import os
 from flask import Flask, render_template, request, jsonify
 from sqlalchemy import create_engine
 from sentence_transformers import SentenceTransformer
-
+from dotenv import load_dotenv
+load_dotenv()
 from search_service import vector_patient_search, chat_from_query_using_rag
 
 IRIS_HOST = os.getenv("IRIS_HOST", "iris4health")
