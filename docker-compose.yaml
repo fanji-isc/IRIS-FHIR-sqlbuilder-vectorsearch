@@ -1,0 +1,38 @@
+version: "3.9"
+
+
+services:
+  iris4health:
+    build: .
+    container_name: iris-fhir-sqlbuilder
+    restart: unless-stopped
+    ports:
+      - "8080:52773"  # Map local port 8080 to IRIS web port 52773
+      - "1972:1972"  # Map local port 1972 to iris for health superserver port 1972
+    volumes:
+      - ./data:/data  # Map local 'data' directory to '/data' inside container
+      # - ./fhirdata:/fhirdata  
+    environment:
+      ISC_DATA_DIRECTORY: /data/ifconfig
+      ISC_CPF_MERGE_FILE: /merge/CMF.cpf
+    entrypoint: ["/iris-main"]
+
+  flask:
+      build:
+        context: ./app
+        dockerfile: Dockerfile
+      container_name: flask-ui
+      # NOTE: no depends_on here on purpose
+      restart: "no"
+      ports:
+        - "8000:8000"
+      volumes:
+        - ./app:/app
+      environment:
+        IRIS_HOST: iris4health
+        IRIS_PORT: "1972"
+        IRIS_NAMESPACE: DEMO
+        IRIS_USER: _SYSTEM
+        IRIS_PASSWORD: ISCDEMO
+      command: ["sh", "-lc", "python -u /app/load_data.py && exec python -u /app/app.py"]
+

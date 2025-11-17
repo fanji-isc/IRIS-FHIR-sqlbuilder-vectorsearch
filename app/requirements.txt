@@ -1,0 +1,7 @@
+sqlalchemy-iris 
+sentence_transformers
+setuptools
+openai
+dotenv
+flask
+pandas
