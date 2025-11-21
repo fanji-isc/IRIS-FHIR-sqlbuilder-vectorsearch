@@ -68,7 +68,7 @@ This project enables **semantic search on FHIR data** using InterSystems IRIS. B
     ```sql
     SELECT * FROM sql1.QuestionnaireResponse
     ```
-    ![sql1query](./sql1query.png)
+    ![sql1query](./images/sql1query.png)
 
 5.  **Application Setup & Vectorization**
 
