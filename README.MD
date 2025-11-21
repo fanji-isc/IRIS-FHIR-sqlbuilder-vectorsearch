@@ -12,6 +12,11 @@ This project enables **semantic search on FHIR data** using InterSystems IRIS. B
     git clone [https://github.com/fanji-isc/IRIS-FHIR-sqlbuilder-vectorsearch.git](https://github.com/fanji-isc/IRIS-FHIR-sqlbuilder-vectorsearch.git)
     cd IRIS-FHIR-sqlbuilder-vectorsearch
     ```
+    
+    Edit the existing `.env` file and replace the placeholder with your own key:
+    ```bash
+    OPENAI_API_KEY= your_api_key_here
+    ```
 2.  **Build and Start IRIS For Health**
     ```bash
     docker-compose up -d --build iris4health
