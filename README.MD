@@ -10,7 +10,7 @@ In this project, we work with **FHIR Questionnaire** and **QuestionnaireResponse
 Before running this project, make sure you have the following:
 1. **OpenAI API Key**
 
-    Edit the existing `.env` file and replace the placeholder with your own key:
+    In the App folder,edit the existing `.env` file and replace the placeholder with your own key:
     ```bash
     OPENAI_API_KEY= your_api_key_here
     ```
@@ -36,7 +36,8 @@ Before running this project, make sure you have the following:
         * **Username**: _SYSTEM
         * **Password**: ISCDEMO
 
-    In IRIS Portal, navigate to Health--> FHIR Server Management-->FHIR SQL Builder(left side menu), fill out each section with below information.
+    In IRIS Portal, navigate to Health--> Click on the DEMO Namespace--> FHIR Server Management-->FHIR SQL Builder(left side menu) <img src="./images/icon.png" alt="icon" width="20"/>, 
+    fill out each section with below information.
 
     * **Analysis**
         * Click <img src="./images/new1.png" alt="new1" width="50"/>, then under FHIR Repository,click <img src="./images/new2.png" alt="new2" width="50"/>,
