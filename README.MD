@@ -107,7 +107,7 @@ Before running this project, make sure you have the following:
 
     (this build takes several minutes to complete) 
 
-6. **Useage & Demo**
+6. **Usage & Demo**
 
     
     * A search for “diabetes medication” retrieves responses mentioning drugs like metformin, insulin glargine, or acarbose—even if the exact phrase isn’t present.
