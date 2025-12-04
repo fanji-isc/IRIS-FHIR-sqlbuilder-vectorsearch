@@ -36,7 +36,7 @@ Before running this project, make sure you have the following:
         * **Username**: _SYSTEM
         * **Password**: ISCDEMO
 
-    In IRIS Portal, navigate to Health--> Click on the DEMO Namespace--> FHIR Server Management-->FHIR SQL Builder(left side menu) <img src="./images/icon.png" alt="icon" width="20"/>, 
+    In IRIS Portal, navigate to Health--> Click on the DEMO Namespace--> FHIR Server Management-->FHIR SQL Builder(left side menu) <img src="./images/icon.png" alt="icon" width="30"/>, 
     fill out each section with below information.
 
     * **Analysis**
